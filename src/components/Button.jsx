@@ -1,7 +1,16 @@
-function Button({title}) {
+function Button({title, isActive, onShow, children}) {
     return (
-        <button className="showBtn">{title}</button>
+        <div>
+            {isActive ? (
+                <>
+                <button onClick={onShow}>{title}</button>
+                {children}
+                </>
+            ) : (
+                <button onClick={onShow}>{title}</button>
+            )}
+        </div>
     );
 }
 
-export default Button;
+export default Button
