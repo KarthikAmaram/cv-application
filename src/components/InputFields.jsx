@@ -33,16 +33,17 @@ function InputField({q1, q2, q3, q4 = null}) {
             />
             <label for="q2">{q2}</label>
             <input 
-                value={text.form1}
+                value={text.form2}
                 onChange={handleForm1Change}
                 id='q2'
             />
             <label for="q3">{q3}</label>
             <input 
-                value={text.form1}
+                value={text.form3}
                 onChange={handleForm1Change}
                 id='q3'
             />
+            <button type='submit'>Confirm</button>
         </form>
     )
 }
