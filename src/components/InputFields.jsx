@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-function InputField({q1, q2, q3, q4 = null}) {
+function InputField({title, q1, q2, q3, onSubmit}) {
     const [text, setText] = useState({
         form1: '',
         form2: '',
@@ -21,6 +21,7 @@ function InputField({q1, q2, q3, q4 = null}) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        setText({form1: '', form2: '', form3: ''});
     }
 
     return (
@@ -30,20 +31,28 @@ function InputField({q1, q2, q3, q4 = null}) {
                 value={text.form1}
                 onChange={handleForm1Change}
                 id='q1'
+                required
             />
             <label for="q2">{q2}</label>
             <input 
                 value={text.form2}
-                onChange={handleForm1Change}
+                onChange={handleForm2Change}
                 id='q2'
+                required
             />
             <label for="q3">{q3}</label>
             <input 
                 value={text.form3}
-                onChange={handleForm1Change}
+                onChange={handleForm3Change}
                 id='q3'
+                required
             />
-            <button type='submit'>Confirm</button>
+            <button 
+            type='submit'
+            onClick={() => onSubmit(title, text)}
+            >
+                Confirm
+            </button>
         </form>
     )
 }

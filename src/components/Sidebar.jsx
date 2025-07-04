@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Panel from "./Panel.jsx"
 
-function Sidebar() {
+function Sidebar({onSubmit}) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
@@ -13,6 +13,7 @@ function Sidebar() {
                 q1="Full Name:"
                 q2="Email:"
                 q3="Phone Number:"
+                onSubmit={onSubmit}
             />
             <Panel 
                 title="Education"
@@ -21,6 +22,7 @@ function Sidebar() {
                 q1="School Name:"
                 q2="Degree:"
                 q3="Years Studying:"
+                onSubmit={onSubmit}
             />
             <Panel 
                 title="Experience"
@@ -29,6 +31,7 @@ function Sidebar() {
                 q1="Company Name:"
                 q2="Position:"
                 q3="Responsibilites:"
+                onSubmit={onSubmit}
             />
         </div>
     )
