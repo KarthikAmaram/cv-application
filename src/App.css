@@ -10,7 +10,7 @@ html, body, #root {
 #root {
   display: flex;
   background-color: #b2bdd6;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
   color: black;
 }

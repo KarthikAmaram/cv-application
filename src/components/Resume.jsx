@@ -1,3 +1,5 @@
+import "../styles/Resume.css"
+
 function Resume({textObject, pdShow, eduShow, expShow}) {
 
     return (
