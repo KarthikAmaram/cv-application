@@ -1,3 +1,5 @@
+import "../styles/Button.css"
+
 function Button({title, isActive, onShow, children}) {
     return (
         <div>

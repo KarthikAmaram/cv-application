@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#submitBtn {
+    width: 75px;
+    font-size: 12px;
+}
+
+.formQuestion {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input {
+    width: 240px;
+    height: 24px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 4px;
+}

@@ -1,11 +1,12 @@
 import {useState} from 'react'
 import Panel from "./Panel.jsx"
+import "../styles/Sidebar.css"
 
 function Sidebar({onSubmit}) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div>
+        <div className="panelList">
             <Panel 
                 title="Personal Details"
                 isActive={activeIndex === 0}
